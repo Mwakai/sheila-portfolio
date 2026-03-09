@@ -492,7 +492,10 @@ nav.scrolled {
   margin-bottom: 1rem;
   font-weight: 400;
 }
-
+.__cf_email__ {
+  color: var(--rose);
+  font-weight: 500;
+}
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(3.2rem, 5.5vw, 5rem);
