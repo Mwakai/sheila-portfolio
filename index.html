@@ -1,0 +1,1250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheila — Marketing Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- =============================================
+     NAVIGATION
+     ============================================= -->
+    <nav id="mainNav">
+      <div class="nav-logo" onclick="navigate('home')">
+        Sheila<span>.</span>
+      </div>
+      <ul class="nav-menu">
+        <li>
+          <a href="#" onclick="navigate('home')" data-page="home">Home</a>
+        </li>
+        <li>
+          <a href="#" onclick="navigate('about')" data-page="about">About</a>
+        </li>
+        <li>
+          <a href="#" onclick="navigate('portfolio')" data-page="portfolio"
+            >Work</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="navigate('services')" data-page="services"
+            >Services</a
+          >
+        </li>
+        <li class="cta">
+          <a href="#" onclick="navigate('contact')">Let's Talk</a>
+        </li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+      <a
+        href="#"
+        onclick="
+          navigate('home');
+          closeMobile();
+        "
+        >Home</a
+      >
+
+      <a
+        href="#"
+        onclick="
+          navigate('portfolio');
+          closeMobile();
+        "
+        >Work</a
+      >
+
+      <a
+        href="#"
+        onclick="
+          navigate('contact');
+          closeMobile();
+        "
+        style="color: var(--rose)"
+        >Let's Talk</a
+      >
+    </div>
+
+    <!-- =============================================
+     PAGE: HOME
+     ============================================= -->
+    <div class="page active" id="page-home">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <p class="hero-eyebrow fade-up delay-1">Marketing Specialist</p>
+          <h1 class="hero-title fade-up delay-2">
+            <span class="first-name">Hello,</span>
+            <span>I'm <span class="role">Sheila</span></span>
+          </h1>
+          <p class="hero-tagline fade-up delay-3">
+            A marketing specialist passionate about creating meaningful
+            connections between brands and their audiences.<br /><br />
+            I enjoy developing creative content and strategies that not only
+            engage people but also create lasting experiences and strong brand
+            relationships.<br /><br />
+            I welcome you to view a glimpse into my journey, and explore ideas
+            and the work that continues to shape my path in marketing.
+          </p>
+          <div class="hero-actions fade-up delay-4">
+            <a href="#" class="btn btn-primary" onclick="navigate('portfolio')">
+              Explore My Work <span class="arrow">→</span>
+            </a>
+            <a href="#" class="btn btn-outline" onclick="navigate('about')"
+              >My Story</a
+            >
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-img-wrap">
+            <!-- 
+          ╔══════════════════════════════════╗
+          ║  REPLACE THIS WITH YOUR IMAGE   ║
+          ║  Sheila's portrait / hero photo ║
+          ║  Recommended: 800×1000px        ║
+          ╚══════════════════════════════════╝
+          To use: replace the .img-placeholder div below with:
+          <img src="YOUR_IMAGE.jpg" alt="Sheila">
+        -->
+            <img src="assets/image.jpeg" alt="Sheila" />
+          </div>
+        </div>
+      </section>
+
+      <!-- VALUES STRIP -->
+      <div class="values-strip">
+        <div class="value-item">
+          <span class="value-icon">✦</span>
+          <span class="value-name">Brand Storytelling</span>
+          <span class="value-desc"
+            >Crafting narratives that make audiences feel something real</span
+          >
+        </div>
+        <div class="value-item">
+          <span class="value-icon">◈</span>
+          <span class="value-name">Creative Strategy</span>
+          <span class="value-desc"
+            >Ideas rooted in insight, built for lasting impact</span
+          >
+        </div>
+        <div class="value-item">
+          <span class="value-icon">❋</span>
+          <span class="value-name">Audience Connection</span>
+          <span class="value-desc"
+            >Building genuine bonds between brands and people</span
+          >
+        </div>
+        <div class="value-item">
+          <span class="value-icon">◇</span>
+          <span class="value-name">Content Excellence</span>
+          <span class="value-desc"
+            >Every word, image, and touchpoint crafted with intention</span
+          >
+        </div>
+      </div>
+
+      <!-- SKILLS PREVIEW -->
+      <section class="skills-preview">
+        <div class="skills-text">
+          <p class="section-eyebrow">What I Do</p>
+          <h2 class="section-title">Skills that <em>move</em> the needle</h2>
+          <div class="deco-line"></div>
+          <p class="body-text">
+            From high-level brand strategy to hands-on content creation, I bring
+            a full suite of marketing capabilities to every project — always
+            anchored in clarity, creativity, and connection.
+          </p>
+          <a
+            href="#"
+            class="btn btn-outline"
+            style="margin-top: 2rem"
+            onclick="navigate('services')"
+          >
+            View All Services <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-card-icon">🎯</div>
+            <div class="skill-card-name">Content Strategy</div>
+            <div class="skill-card-desc">
+              Building content ecosystems that educate, inspire, and convert
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-icon">✏️</div>
+            <div class="skill-card-name">Copywriting</div>
+            <div class="skill-card-desc">
+              Words that resonate — from taglines to long-form narratives
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-icon">📱</div>
+            <div class="skill-card-name">Social Media</div>
+            <div class="skill-card-desc">
+              Platform-native content that sparks real engagement
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-icon">🎨</div>
+            <div class="skill-card-name">Brand Development</div>
+            <div class="skill-card-desc">
+              Shaping identities that are distinctive and enduring
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED WORK TEASER -->
+      <section class="work-teaser">
+        <div class="work-teaser-header">
+          <div>
+            <p class="section-eyebrow">Featured Work</p>
+            <h2 class="section-title">Recent <em>projects</em></h2>
+          </div>
+          <a href="#" class="btn btn-outline" onclick="navigate('portfolio')"
+            >See All Work <span class="arrow">→</span></a
+          >
+        </div>
+        <div class="work-teaser-grid">
+          <div class="work-card" onclick="navigate('portfolio')">
+            <div class="work-card-img">
+              <div
+                class="img-placeholder"
+                style="
+                  border-radius: 0;
+                  border: none;
+                  height: 240px;
+                  background: linear-gradient(145deg, #f0ddd7, #e8dccf);
+                "
+              >
+                <span>Social Media Work</span>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag-pill">Social Media</span>
+              </div>
+              <h3 class="work-card-title">Social Media Content</h3>
+              <p class="work-card-sub">
+                Explore some of the social media posts I've created recently.
+              </p>
+            </div>
+          </div>
+          <div class="work-card" onclick="navigate('portfolio')">
+            <div class="work-card-img">
+              <div
+                class="img-placeholder"
+                style="
+                  border-radius: 0;
+                  border: none;
+                  height: 240px;
+                  background: linear-gradient(145deg, #d4e8ed, #f0ddd7);
+                "
+              >
+                <span>Print Media</span>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag-pill">Print Media</span>
+              </div>
+              <h3 class="work-card-title">Flyers & Print Design</h3>
+              <p class="work-card-sub">
+                Explore some of the flyers I've created recently.
+              </p>
+            </div>
+          </div>
+          <div class="work-card" onclick="navigate('portfolio')">
+            <div class="work-card-img">
+              <div
+                class="img-placeholder"
+                style="
+                  border-radius: 0;
+                  border: none;
+                  height: 240px;
+                  background: linear-gradient(145deg, #e8dccf, #d4e8ed);
+                "
+              >
+                <span>Banners</span>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="tag-pill">Banners</span>
+              </div>
+              <h3 class="work-card-title">Brand Banners & Backdrops</h3>
+              <p class="work-card-sub">
+                Banners created for brands — from event backdrops to digital
+                displays.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- END PAGE: HOME -->
+
+    <!-- =============================================
+     PAGE: ABOUT
+     ============================================= -->
+    <div class="page" id="page-about">
+      <section class="about-hero">
+        <div class="about-hero-img">
+          <!--
+        ╔══════════════════════════════════════╗
+        ║  REPLACE WITH SHEILA'S ABOUT PHOTO  ║
+        ║  Suggested: professional / candid   ║
+        ║  Recommended: 700 × 900px           ║
+        ╚══════════════════════════════════════╝
+        Replace .img-placeholder with: <img src="about-photo.jpg" alt="Sheila">
+      -->
+          <div
+            class="img-placeholder"
+            style="
+              height: 100%;
+              border-radius: 0;
+              border: none;
+              background: linear-gradient(
+                160deg,
+                var(--rose-pale) 0%,
+                var(--beige-mid) 100%
+              );
+            "
+          >
+            <span
+              >About Page Photo<br />Professional / candid portrait<br />(700 ×
+              900px)</span
+            >
+          </div>
+          <div class="about-hero-img-overlay"></div>
+        </div>
+        <div class="about-hero-content">
+          <p class="section-eyebrow fade-up">My Story</p>
+          <h1 class="about-hero-title fade-up delay-1">
+            A marketer driven by<br /><em>meaning</em> & connection
+          </h1>
+          <p class="about-intro fade-up delay-2">
+            "Hello, good to see you here! My name is Sheila — and marketing, to
+            me, is about so much more than campaigns."
+          </p>
+          <p class="about-body fade-up delay-3">
+            I'm a marketing specialist passionate about creating meaningful
+            connections between brands and their audiences. I believe the best
+            marketing doesn't feel like marketing — it feels like a genuine
+            conversation.
+          </p>
+          <p class="about-body fade-up delay-3">
+            I enjoy developing creative content and strategies that not only
+            engage people but also create lasting experiences and strong brand
+            relationships. My work is shaped by curiosity, craft, and a deep
+            belief that every brand has a story worth telling well.
+          </p>
+          <a
+            href="#"
+            class="btn btn-rose fade-up delay-4"
+            onclick="navigate('contact')"
+            style="margin-top: 1rem; width: fit-content"
+          >
+            Work With Me <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-story">
+        <div class="about-story-timeline">
+          <p class="section-eyebrow">My Journey</p>
+          <h2 class="section-title" style="margin-bottom: 2.5rem">
+            Shaping my path <em>in marketing</em>
+          </h2>
+          <div class="timeline-item">
+            <div class="timeline-year">Now</div>
+            <div>
+              <p class="timeline-text-title">Freelance Marketing Specialist</p>
+              <p class="timeline-text-body">
+                Working with brands across hospitality, property, and tech —
+                developing strategies, campaigns, and content that build lasting
+                brand equity.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023</div>
+            <div>
+              <p class="timeline-text-title">
+                Brand & Content Lead · Alpen Enterprises
+              </p>
+              <p class="timeline-text-body">
+                Led social media and campaign strategy for Alpen's growing
+                portfolio — from product launches to B2B member acquisition for
+                BIGA+.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2021</div>
+            <div>
+              <p class="timeline-text-title">Marketing Coordinator</p>
+              <p class="timeline-text-body">
+                Developed content calendars, email campaigns, and social
+                presence for hospitality and retail brands. Where my love for
+                storytelling took root.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2019</div>
+            <div>
+              <p class="timeline-text-title">Bachelor of Marketing</p>
+              <p class="timeline-text-body">
+                Graduated with a foundation in brand strategy, consumer
+                behaviour, and digital marketing — and a burning desire to apply
+                it all creatively.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-story-right">
+          <div class="about-portrait-wrap">
+            <!--
+          ╔══════════════════════════════════╗
+          ║  REPLACE WITH SECONDARY PHOTO   ║
+          ║  Candid / at-work shot          ║
+          ║  Recommended: 600 × 800px       ║
+          ╚══════════════════════════════════╝
+        -->
+            <div
+              class="img-placeholder about-portrait"
+              style="aspect-ratio: 3/4; border-radius: 32px 32px 4px 4px"
+            >
+              <span
+                >Secondary Photo<br />Candid / at-work<br />(600 × 800px)</span
+              >
+            </div>
+            <div class="about-portrait-tag">
+              <div class="stat-num">20+</div>
+              <div class="stat-label">Campaigns Delivered</div>
+            </div>
+          </div>
+          <p class="body-text">
+            I welcome you to view a glimpse into my journey, and explore ideas
+            and the work that continues to shape my path in marketing.
+          </p>
+          <div style="margin-top: 2rem; display: flex; gap: 2rem">
+            <div>
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 2.2rem;
+                  font-weight: 300;
+                  color: var(--teal);
+                "
+              >
+                5+
+              </div>
+              <div
+                style="
+                  font-size: 0.7rem;
+                  letter-spacing: 0.12em;
+                  text-transform: uppercase;
+                  color: var(--text-light);
+                  margin-top: 0.2rem;
+                "
+              >
+                Years Experience
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 2.2rem;
+                  font-weight: 300;
+                  color: var(--teal);
+                "
+              >
+                8+
+              </div>
+              <div
+                style="
+                  font-size: 0.7rem;
+                  letter-spacing: 0.12em;
+                  text-transform: uppercase;
+                  color: var(--text-light);
+                  margin-top: 0.2rem;
+                "
+              >
+                Brands Worked With
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 2.2rem;
+                  font-weight: 300;
+                  color: var(--teal);
+                "
+              >
+                ∞
+              </div>
+              <div
+                style="
+                  font-size: 0.7rem;
+                  letter-spacing: 0.12em;
+                  text-transform: uppercase;
+                  color: var(--text-light);
+                  margin-top: 0.2rem;
+                "
+              >
+                Coffees Consumed
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-passions">
+        <p class="section-eyebrow">What Drives Me</p>
+        <h2 class="section-title">My passions <em>& approach</em></h2>
+        <div class="passions-grid">
+          <div class="passion-card">
+            <div class="passion-icon">🌱</div>
+            <h3 class="passion-title">Meaningful Connections</h3>
+            <p class="passion-body">
+              I believe every brand interaction is an opportunity to create
+              something real — a moment that makes someone feel seen,
+              understood, or inspired.
+            </p>
+          </div>
+          <div class="passion-card">
+            <div class="passion-icon">✦</div>
+            <h3 class="passion-title">Creative Storytelling</h3>
+            <p class="passion-body">
+              The best brands are the ones with stories worth telling. I love
+              finding the narrative thread that makes a brand feel alive and
+              relatable.
+            </p>
+          </div>
+          <div class="passion-card">
+            <div class="passion-icon">📊</div>
+            <h3 class="passion-title">Strategy Meets Soul</h3>
+            <p class="passion-body">
+              Great marketing is both art and science. I bridge the gap —
+              bringing data-informed thinking to creative ideas so they're not
+              just beautiful, but effective.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- END PAGE: ABOUT -->
+
+    <!-- =============================================
+     PAGE: PORTFOLIO
+     ============================================= -->
+    <div class="page" id="page-portfolio">
+      <section class="portfolio-hero">
+        <div>
+          <p class="section-eyebrow fade-up">My Work</p>
+          <h1 class="portfolio-title fade-up delay-1">
+            Projects<br />with <em>purpose</em>
+          </h1>
+        </div>
+        <div>
+          <p class="portfolio-sub fade-up delay-2">
+            A curated selection of campaigns, brand work, and content strategies
+            — each one built around a clear goal: creating real connections
+            between brands and the people they serve.
+          </p>
+        </div>
+      </section>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterWork(this, 'all')">
+          All Work
+        </button>
+        <button class="filter-btn" onclick="filterWork(this, 'social')">
+          Social Media
+        </button>
+        <button class="filter-btn" onclick="filterWork(this, 'print')">
+          Print Media
+        </button>
+        <button class="filter-btn" onclick="filterWork(this, 'banner')">
+          Banners
+        </button>
+        <button class="filter-btn" onclick="filterWork(this, 'content')">
+          Content Strategy
+        </button>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- PROJECT 1: Social Media -->
+        <div class="portfolio-item featured" data-tags="social">
+          <div class="portfolio-item-img">
+            <!--
+          ╔══════════════════════════════════════╗
+          ║  SOCIAL MEDIA — Featured Image      ║
+          ║  Social media post collage / grid   ║
+          ║  Recommended: 900 × 600px           ║
+          ╚══════════════════════════════════════╝
+          Replace with: <img src="social-media.jpg" alt="Social Media Work">
+        -->
+            <div
+              class="img-placeholder"
+              style="
+                height: 100%;
+                min-height: 400px;
+                border-radius: 0;
+                border: none;
+                background: linear-gradient(145deg, #f0ddd7, #e8dccf);
+              "
+            >
+              <span
+                >Social Media Posts<br />Add your social media images here<br />(Collage
+                or grid — 900 × 600px)</span
+              >
+            </div>
+          </div>
+          <div class="portfolio-item-body">
+            <div class="portfolio-item-num">01</div>
+            <div class="portfolio-item-tags">
+              <span class="tag-pill">Social Media</span>
+            </div>
+            <h2 class="portfolio-item-title">Social Media Content</h2>
+            <p class="portfolio-item-desc">
+              Explore some of the social media posts I've created recently —
+              crafted to stop the scroll, spark conversation, and build genuine
+              brand presence across platforms.
+            </p>
+            <p
+              class="portfolio-item-desc"
+              style="margin-top: 0.8rem; font-style: italic; color: var(--rose)"
+            >
+              Content Creation · Copywriting · Visual Direction
+            </p>
+            <a href="#" class="portfolio-item-link"
+              >Explore Posts <span>→</span></a
+            >
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Print Media -->
+        <div class="portfolio-item" data-tags="print">
+          <div class="portfolio-item-img">
+            <!--
+          ╔══════════════════════════════════════╗
+          ║  PRINT MEDIA — Image                ║
+          ║  Flyer designs / print pieces       ║
+          ║  Recommended: 700 × 500px           ║
+          ╚══════════════════════════════════════╝
+          Replace with: <img src="print-media.jpg" alt="Print Media">
+        -->
+            <div
+              class="img-placeholder"
+              style="
+                border-radius: 0;
+                border: none;
+                height: 100%;
+                background: linear-gradient(145deg, #d4e8ed, #f0ddd7);
+              "
+            >
+              <span
+                >Print Media / Flyers<br />Add your flyer designs here<br />(700
+                × 500px)</span
+              >
+            </div>
+          </div>
+          <div class="portfolio-item-body">
+            <div class="portfolio-item-num">02</div>
+            <div class="portfolio-item-tags">
+              <span class="tag-pill">Print Media</span>
+            </div>
+            <h3 class="portfolio-item-title">Print Media & Flyers</h3>
+            <p class="portfolio-item-desc">
+              Explore some of the flyers I've created recently — designed to
+              communicate clearly, look beautiful in print, and leave a lasting
+              impression in the hands of the right audience.
+            </p>
+            <a href="#" class="portfolio-item-link"
+              >Explore Flyers <span>→</span></a
+            >
+          </div>
+        </div>
+
+        <!-- PROJECT 3: Banners -->
+        <div class="portfolio-item" data-tags="banner">
+          <div class="portfolio-item-img">
+            <!--
+          ╔══════════════════════════════════════╗
+          ║  BANNERS — Image                    ║
+          ║  Brand banners / backdrop designs   ║
+          ║  Recommended: 700 × 500px           ║
+          ╚══════════════════════════════════════╝
+          Replace with: <img src="banners.jpg" alt="Banners">
+        -->
+            <div
+              class="img-placeholder"
+              style="
+                border-radius: 0;
+                border: none;
+                height: 100%;
+                background: linear-gradient(145deg, #e8dccf, #d4e8ed);
+              "
+            >
+              <span
+                >Banners & Backdrops<br />Add your banner designs here<br />(700
+                × 500px)</span
+              >
+            </div>
+          </div>
+          <div class="portfolio-item-body">
+            <div class="portfolio-item-num">03</div>
+            <div class="portfolio-item-tags">
+              <span class="tag-pill">Banners</span>
+            </div>
+            <h3 class="portfolio-item-title">Banners & Brand Backdrops</h3>
+            <p class="portfolio-item-desc">
+              Explore some of the banners I've created for brands recently —
+              from event backdrops to digital display banners, each designed to
+              make a brand unmistakable in any setting.
+            </p>
+            <a href="#" class="portfolio-item-link"
+              >Explore Banners <span>→</span></a
+            >
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Content Strategy -->
+        <div
+          class="portfolio-item featured"
+          data-tags="content"
+          style="background: var(--teal-dark)"
+        >
+          <div
+            class="portfolio-item-img"
+            style="
+              background: linear-gradient(
+                135deg,
+                #123f4b 0%,
+                #1a5c6b 50%,
+                #2a7a8e 100%
+              );
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-height: 340px;
+            "
+          >
+            <div style="text-align: center; padding: 3rem">
+              <div style="font-size: 3.5rem; margin-bottom: 1rem">📋</div>
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 1.8rem;
+                  font-style: italic;
+                  color: rgba(255, 255, 255, 0.85);
+                  line-height: 1.3;
+                "
+              >
+                Reseller<br />Playbook
+              </div>
+              <div
+                style="
+                  margin-top: 1rem;
+                  display: inline-block;
+                  padding: 0.35rem 1rem;
+                  background: rgba(192, 123, 104, 0.25);
+                  border: 1px solid rgba(192, 123, 104, 0.4);
+                  border-radius: 100px;
+                  font-size: 0.65rem;
+                  letter-spacing: 0.16em;
+                  text-transform: uppercase;
+                  color: rgba(240, 221, 215, 0.8);
+                "
+              >
+                Confidential
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item-body" style="background: var(--teal-dark)">
+            <div
+              class="portfolio-item-num"
+              style="color: rgba(255, 255, 255, 0.1)"
+            >
+              04
+            </div>
+            <div class="portfolio-item-tags">
+              <span
+                class="tag-pill"
+                style="
+                  background: rgba(192, 123, 104, 0.2);
+                  color: var(--rose-light);
+                "
+                >Content Strategy</span
+              >
+            </div>
+            <h2
+              class="portfolio-item-title"
+              style="color: rgba(255, 255, 255, 0.9)"
+            >
+              Comprehensive Reseller Playbook
+            </h2>
+            <p
+              class="portfolio-item-desc"
+              style="color: rgba(255, 255, 255, 0.55)"
+            >
+              Created a comprehensive reseller playbook designed to guide
+              partners on brand positioning, lead generation, and customer
+              engagement. The playbook served as a single source of truth for
+              partner teams — covering messaging frameworks, outreach
+              strategies, and engagement best practices.
+            </p>
+            <p
+              class="portfolio-item-desc"
+              style="
+                margin-top: 0.8rem;
+                color: rgba(240, 221, 215, 0.6);
+                font-style: italic;
+                font-size: 0.85rem;
+              "
+            >
+              ✦ Specific materials remain confidential.
+            </p>
+            <span
+              class="portfolio-item-link"
+              style="
+                color: rgba(79, 163, 181, 0.7);
+                cursor: default;
+                margin-top: 1.5rem;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.72rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+              "
+            >
+              Strategy · B2B · Partner Enablement
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END PAGE: PORTFOLIO -->
+
+    <!-- =============================================
+     PAGE: SERVICES
+     ============================================= -->
+    <div class="page" id="page-services">
+      <section class="services-hero">
+        <p class="section-eyebrow fade-up">What I Offer</p>
+        <h1 class="section-title fade-up delay-1">
+          Services built for<br /><em>real impact</em>
+        </h1>
+        <p class="services-hero-sub fade-up delay-2">
+          Whether you're building a brand from scratch, launching a campaign, or
+          looking to deepen your audience relationships — I bring strategic
+          thinking and creative execution to every engagement.
+        </p>
+        <a
+          href="#"
+          class="btn btn-primary fade-up delay-3"
+          onclick="navigate('contact')"
+        >
+          Start a Conversation <span class="arrow">→</span>
+        </a>
+      </section>
+
+      <div class="services-grid-section">
+        <div class="service-card">
+          <div class="service-num">01 —</div>
+          <h2 class="service-title">Content Strategy</h2>
+          <p class="service-desc">
+            A comprehensive plan for what to say, where to say it, and how to
+            make it matter. I build content ecosystems that serve both brand
+            goals and audience needs.
+          </p>
+          <ul class="service-includes">
+            <li>Content audits & gap analysis</li>
+            <li>Editorial calendars & content mapping</li>
+            <li>Tone of voice development</li>
+            <li>Multi-channel content planning</li>
+            <li>Performance frameworks & KPI setting</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">02 —</div>
+          <h2 class="service-title">Brand Development</h2>
+          <p class="service-desc">
+            Building and refining brand identities that are distinctive,
+            consistent, and deeply resonant. From positioning to messaging, I
+            help brands find — and own — their voice.
+          </p>
+          <ul class="service-includes">
+            <li>Brand positioning & differentiation</li>
+            <li>Messaging architecture</li>
+            <li>Tone of voice guides</li>
+            <li>Brand narrative development</li>
+            <li>Brand refresh strategy</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">03 —</div>
+          <h2 class="service-title">Social Media Management</h2>
+          <p class="service-desc">
+            Platform-native content and community management that builds genuine
+            audience relationships — not just follower counts. I create social
+            presences that feel alive.
+          </p>
+          <ul class="service-includes">
+            <li>Social strategy & platform planning</li>
+            <li>Content creation (copy + direction)</li>
+            <li>Community management</li>
+            <li>Campaign planning & execution</li>
+            <li>Analytics review & optimisation</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">04 —</div>
+          <h2 class="service-title">Campaign Management</h2>
+          <p class="service-desc">
+            End-to-end campaign development — from insight and concept through
+            to execution and measurement. I build campaigns with clear
+            objectives and creative ideas worth remembering.
+          </p>
+          <ul class="service-includes">
+            <li>Campaign concept & strategy</li>
+            <li>Creative brief development</li>
+            <li>Multi-channel execution</li>
+            <li>Print & digital asset coordination</li>
+            <li>Post-campaign reporting</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">05 —</div>
+          <h2 class="service-title">Copywriting</h2>
+          <p class="service-desc">
+            Words that work — persuasive, clear, and always on brand. From web
+            copy to email sequences, I write with intention and an ear for what
+            makes people act.
+          </p>
+          <ul class="service-includes">
+            <li>Website copy & landing pages</li>
+            <li>Email marketing sequences</li>
+            <li>Social media copy</li>
+            <li>Sales collateral & brochures</li>
+            <li>Brand storytelling content</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">06 —</div>
+          <h2 class="service-title">Marketing Consulting</h2>
+          <p class="service-desc">
+            Strategic guidance for businesses looking to sharpen their marketing
+            approach. Ideal for growing businesses wanting expert perspective
+            without a full-time hire.
+          </p>
+          <ul class="service-includes">
+            <li>Marketing audits & recommendations</li>
+            <li>Go-to-market strategy</li>
+            <li>Team workshops & training</li>
+            <li>Competitor & market analysis</li>
+            <li>Retainer-based advisory</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PROCESS -->
+      <section class="process-section">
+        <p class="section-eyebrow">How I Work</p>
+        <h2 class="section-title">A process built on <em>clarity</em></h2>
+        <p class="process-sub">
+          Every engagement begins with deep listening and ends with measurable
+          results. Here's how I approach every project.
+        </p>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-step-num">01</div>
+            <h3 class="process-step-title">Discover</h3>
+            <p class="process-step-desc">
+              Deep dive into your brand, goals, audience, and competitive
+              landscape. No assumptions — just listening and learning.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">02</div>
+            <h3 class="process-step-title">Strategise</h3>
+            <p class="process-step-desc">
+              Building a clear strategic direction rooted in insight — defining
+              the message, the audience, and the approach.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">03</div>
+            <h3 class="process-step-title">Create</h3>
+            <p class="process-step-desc">
+              Bringing the strategy to life with creative content, campaigns,
+              and assets that feel genuinely on brand.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">04</div>
+            <h3 class="process-step-title">Refine</h3>
+            <p class="process-step-desc">
+              Measuring what matters, learning from results, and continuously
+              optimising for stronger performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING CTA -->
+      <div class="pricing-cta">
+        <p class="section-eyebrow" style="justify-content: center">
+          <span
+            style="
+              display: inline-block;
+              width: 2rem;
+              height: 1px;
+              background: var(--rose);
+              vertical-align: middle;
+              margin-right: 0.7rem;
+            "
+          ></span>
+          Ready to Start?
+        </p>
+        <h2 class="section-title">
+          Let's build something <em>worth remembering</em>
+        </h2>
+        <p class="pricing-cta-sub">
+          Open to project-based work, retainers, and creative collaborations.
+          Every engagement is tailored to your needs — let's talk about yours.
+        </p>
+        <a href="#" class="btn btn-primary" onclick="navigate('contact')">
+          Get In Touch <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <!-- END PAGE: SERVICES -->
+
+    <!-- =============================================
+     PAGE: CONTACT
+     ============================================= -->
+    <div class="page" id="page-contact">
+      <section class="contact-hero">
+        <div class="contact-info-col">
+          <p class="section-eyebrow fade-up">Say Hello</p>
+          <h1 class="section-title fade-up delay-1">
+            Let's create something<br /><em>together</em>
+          </h1>
+          <p class="contact-tagline fade-up delay-2">
+            Whether you have a project in mind, want to explore a collaboration,
+            or simply want to say hello — I'd love to hear from you.
+          </p>
+
+          <div class="contact-details fade-up delay-3">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✉</div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-value">
+                  <a
+                    href="/cdn-cgi/l/email-protection"
+                    class="__cf_email__"
+                    data-cfemail="0e666b6262614e7d666b67626f206d6163"
+                    >[email&#160;protected]</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <div class="contact-detail-label">Based In</div>
+                <div class="contact-detail-value">
+                  Australia · Open to remote
+                </div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">⏱</div>
+              <div>
+                <div class="contact-detail-label">Response Time</div>
+                <div class="contact-detail-value">Usually within 24 hours</div>
+              </div>
+            </div>
+          </div>
+
+          <p
+            style="
+              font-size: 0.7rem;
+              letter-spacing: 0.16em;
+              text-transform: uppercase;
+              color: rgba(255, 255, 255, 0.3);
+              margin-bottom: 0.8rem;
+              font-weight: 500;
+            "
+          >
+            Find Me On
+          </p>
+          <div class="contact-socials fade-up delay-4">
+            <a href="#" class="contact-social-btn">LinkedIn</a>
+            <a href="#" class="contact-social-btn">Instagram</a>
+            <a href="#" class="contact-social-btn">Twitter / X</a>
+            <a href="#" class="contact-social-btn">Behance</a>
+          </div>
+        </div>
+
+        <div class="contact-form-col">
+          <h2 class="contact-form-title">Send me a message</h2>
+          <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fname">First Name</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="fname"
+                  placeholder="Your first name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lname">Last Name</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="lname"
+                  placeholder="Your last name"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="service">How Can I Help?</label>
+              <select class="form-select" id="service">
+                <option value="" disabled selected>Select a service...</option>
+                <option>Content Strategy</option>
+                <option>Brand Development</option>
+                <option>Social Media Management</option>
+                <option>Campaign Management</option>
+                <option>Copywriting</option>
+                <option>Marketing Consulting</option>
+                <option>Something Else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Your Message</label>
+              <textarea
+                class="form-textarea"
+                id="message"
+                placeholder="Tell me about your project, goals, or just say hello..."
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-rose"
+              style="width: 100%; justify-content: center; margin-top: 0.5rem"
+            >
+              Send Message <span class="arrow">→</span>
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✦</div>
+            <p class="form-success-msg">Thank you! I'll be in touch soon.</p>
+            <p
+              style="
+                font-size: 0.8rem;
+                color: var(--text-light);
+                margin-top: 0.5rem;
+              "
+            >
+              Typically within 24 hours.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- END PAGE: CONTACT -->
+
+    <!-- =============================================
+     FOOTER
+     ============================================= -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Sheila<span>.</span></div>
+          <p class="footer-tagline">
+            Marketing Specialist · Creating meaningful connections between
+            brands and people
+          </p>
+        </div>
+        <div class="footer-nav-group">
+          <p class="footer-nav-label">Navigation</p>
+          <ul class="footer-nav-list">
+            <li><a href="#" onclick="navigate('home')">Home</a></li>
+            <li><a href="#" onclick="navigate('about')">About</a></li>
+            <li><a href="#" onclick="navigate('portfolio')">Work</a></li>
+            <li><a href="#" onclick="navigate('services')">Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <p class="footer-nav-label">Connect</p>
+          <ul class="footer-nav-list">
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#" onclick="navigate('contact')">Get In Touch</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy"
+          >© 2025 Sheila — Marketing Specialist. All rights reserved.</span
+        >
+        <span class="footer-made"
+          >Crafting connections, one campaign at a time ✦</span
+        >
+      </div>
+    </footer>
+
+    <!-- =============================================
+     JAVASCRIPT
+     ============================================= -->
+    <script src="script.js"></script>
+    >
+  </body>
+</html>
