@@ -41,24 +41,22 @@ function navigate(page) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  // Update nav links
+  // Update nav links (only highlight main nav items, not gallery subpages)
+  const mainPages = ["home", "portfolio", "about", "services", "contact"];
   document.querySelectorAll("[data-page]").forEach((a) => {
     a.classList.toggle("active", a.dataset.page === page);
   });
 
+  // If navigating to a gallery sub-page, keep "portfolio" nav link highlighted
+  if (["gallery-social", "gallery-print", "gallery-banner"].includes(page)) {
+    document.querySelectorAll("[data-page]").forEach((a) => {
+      a.classList.toggle("active", a.dataset.page === "portfolio");
+    });
+  }
+
   currentPage = page;
   return false;
 }
-
-// Intercept all onclick that call navigate
-document.addEventListener("click", (e) => {
-  if (
-    e.target.closest('a[href="#"]') ||
-    e.target.closest('button[type="button"]')
-  ) {
-    // Let onclick handle it
-  }
-});
 
 // ---- MOBILE NAV ----
 const hamburger = document.getElementById("hamburger");
@@ -121,4 +119,72 @@ function handleFormSubmit(e) {
   const success = document.getElementById("formSuccess");
   form.style.display = "none";
   success.classList.add("show");
+}
+
+// ---- LIGHTBOX ----
+let lightboxItems = []; // array of DOM nodes (img or placeholder div) cloned from grid
+let lightboxIndex = 0;
+
+/**
+ * openLightbox(gridId, startIndex)
+ * Collects all .gallery-item-inner children from the given grid
+ * and opens the lightbox at startIndex.
+ */
+function openLightbox(gridId, startIndex) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+
+  // Collect the inner content of every gallery item
+  lightboxItems = Array.from(grid.querySelectorAll(".gallery-item-inner"));
+  lightboxIndex = startIndex;
+
+  renderLightboxSlide();
+  document.getElementById("lightbox").classList.add("open");
+  document.body.style.overflow = "hidden";
+
+  // Keyboard support
+  document.addEventListener("keydown", lightboxKeyHandler);
+}
+
+function renderLightboxSlide() {
+  const wrap = document.getElementById("lightboxImgWrap");
+  const counter = document.getElementById("lightboxCounter");
+
+  wrap.style.opacity = "0";
+  setTimeout(() => {
+    wrap.innerHTML = "";
+    const item = lightboxItems[lightboxIndex];
+    // Clone the first child (img or placeholder div)
+    const content = item.firstElementChild.cloneNode(true);
+    wrap.appendChild(content);
+    wrap.style.opacity = "1";
+  }, 150);
+
+  counter.textContent = `${lightboxIndex + 1} / ${lightboxItems.length}`;
+}
+
+function lightboxNav(direction) {
+  lightboxIndex =
+    (lightboxIndex + direction + lightboxItems.length) % lightboxItems.length;
+  renderLightboxSlide();
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("open");
+  document.body.style.overflow = "";
+  document.removeEventListener("keydown", lightboxKeyHandler);
+  lightboxItems = [];
+}
+
+function closeLightboxOnBg(e) {
+  // Only close if clicking the backdrop itself (not inner content)
+  if (e.target === document.getElementById("lightbox")) {
+    closeLightbox();
+  }
+}
+
+function lightboxKeyHandler(e) {
+  if (e.key === "ArrowRight" || e.key === "ArrowDown") lightboxNav(1);
+  if (e.key === "ArrowLeft" || e.key === "ArrowUp") lightboxNav(-1);
+  if (e.key === "Escape") closeLightbox();
 }

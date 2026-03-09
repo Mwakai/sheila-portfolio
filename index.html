@@ -629,7 +629,13 @@
             >
               Content Creation · Copywriting · Visual Direction
             </p>
-            <a href="#" class="portfolio-item-link"
+            <a
+              href="#"
+              class="portfolio-item-link"
+              onclick="
+                navigate('gallery-social');
+                return false;
+              "
               >Explore Posts <span>→</span></a
             >
           </div>
@@ -659,7 +665,13 @@
               communicate clearly, look beautiful in print, and leave a lasting
               impression in the hands of the right audience.
             </p>
-            <a href="#" class="portfolio-item-link"
+            <a
+              href="#"
+              class="portfolio-item-link"
+              onclick="
+                navigate('gallery-print');
+                return false;
+              "
               >Explore Flyers <span>→</span></a
             >
           </div>
@@ -689,7 +701,13 @@
               event backdrops to digital display banners, each designed to make
               a brand unmistakable in any setting.
             </p>
-            <a href="#" class="portfolio-item-link"
+            <a
+              href="#"
+              class="portfolio-item-link"
+              onclick="
+                navigate('gallery-banner');
+                return false;
+              "
               >Explore Banners <span>→</span></a
             >
           </div>
@@ -1167,6 +1185,255 @@
       </section>
     </div>
     <!-- END PAGE: CONTACT -->
+
+    <!-- =============================================
+     GALLERY: SOCIAL MEDIA
+     Add this block before </body> in index.html
+     ============================================= -->
+    <div class="page" id="page-gallery-social">
+      <section class="gallery-hero">
+        <button class="gallery-back-btn" onclick="navigate('portfolio')">
+          <span class="gallery-back-arrow">←</span> Back to Work
+        </button>
+        <div class="gallery-hero-content">
+          <p class="section-eyebrow fade-up">01 — Social Media</p>
+          <h1 class="gallery-title fade-up delay-1">
+            Social Media <em>Content</em>
+          </h1>
+          <p class="gallery-sub fade-up delay-2">
+            Crafted to stop the scroll, spark conversation, and build genuine
+            brand presence across platforms.
+          </p>
+        </div>
+        <div class="gallery-hero-tags fade-up delay-3">
+          <span class="tag-pill">Content Creation</span>
+          <span class="tag-pill">Copywriting</span>
+          <span class="tag-pill">Visual Direction</span>
+        </div>
+      </section>
+
+      <div class="gallery-grid" id="galleryGridSocial">
+        <!-- 
+      ══════════════════════════════════════════════════════
+      HOW TO ADD YOUR IMAGES:
+      Replace each <div class="gallery-placeholder"> block with:
+      <img src="assets/social/your-image.jpg" alt="Description" />
+      
+      Recommended folder: assets/social/
+      Recommended size: 800 × 800px or 1080 × 1350px (portrait)
+      ══════════════════════════════════════════════════════
+    -->
+        <div
+          class="gallery-item"
+          onclick="openLightbox('galleryGridSocial', 0)"
+        >
+          <div class="gallery-item-inner">
+            <img src="assets/print-media.png" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item"
+          onclick="openLightbox('galleryGridSocial', 1)"
+        >
+          <div class="gallery-item-inner">
+            <img src="assets/social-media.png" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+     GALLERY: PRINT MEDIA
+     ============================================= -->
+    <div class="page" id="page-gallery-print">
+      <section class="gallery-hero">
+        <button class="gallery-back-btn" onclick="navigate('portfolio')">
+          <span class="gallery-back-arrow">←</span> Back to Work
+        </button>
+        <div class="gallery-hero-content">
+          <p class="section-eyebrow fade-up">02 — Print Media</p>
+          <h1 class="gallery-title fade-up delay-1">
+            Print Media <em>& Flyers</em>
+          </h1>
+          <p class="gallery-sub fade-up delay-2">
+            Designed to communicate clearly, look beautiful in print, and leave
+            a lasting impression in the hands of the right audience.
+          </p>
+        </div>
+        <div class="gallery-hero-tags fade-up delay-3">
+          <span class="tag-pill">Print Design</span>
+          <span class="tag-pill">Layout</span>
+          <span class="tag-pill">Typography</span>
+        </div>
+      </section>
+
+      <div class="gallery-grid gallery-grid--print" id="galleryGridPrint">
+        <!-- 
+      ══════════════════════════════════════════════════════
+      HOW TO ADD YOUR IMAGES:
+      Replace each <div class="gallery-placeholder"> block with:
+      <img src="assets/print/your-image.jpg" alt="Description" />
+      
+      Recommended folder: assets/print/
+      Recommended size: 794 × 1123px (A4 portrait) or similar
+      ══════════════════════════════════════════════════════
+    -->
+        <div
+          class="gallery-item gallery-item--portrait"
+          onclick="openLightbox('galleryGridPrint', 0)"
+        >
+          <div class="gallery-item-inner">
+            <img src="assets/flyer-1.png" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item gallery-item--portrait"
+          onclick="openLightbox('galleryGridPrint', 1)"
+        >
+          <div class="gallery-item-inner">
+            <img src="assets/flyer-2.png" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item gallery-item--portrait"
+          onclick="openLightbox('galleryGridPrint', 2)"
+        >
+          <div class="gallery-item-inner">
+            <img src="assets/flyer-3.png" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item gallery-item--portrait"
+          onclick="openLightbox('galleryGridPrint', 3)"
+        >
+          <div class="gallery-item-inner">
+            <img src="assets/flyer-4.png" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item gallery-item--portrait"
+          onclick="openLightbox('galleryGridPrint', 4)"
+        >
+          <div class="gallery-item-inner">
+            <img src="assets/flyer-5.png" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="gallery-item gallery-item--portrait"
+          onclick="openLightbox('galleryGridPrint', 5)"
+        >
+          <div class="gallery-item-inner">
+            <img src="assets/flyer-6.png" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================
+     GALLERY: BANNERS
+     ============================================= -->
+    <div class="page" id="page-gallery-banner">
+      <section class="gallery-hero">
+        <button class="gallery-back-btn" onclick="navigate('portfolio')">
+          <span class="gallery-back-arrow">←</span> Back to Work
+        </button>
+        <div class="gallery-hero-content">
+          <p class="section-eyebrow fade-up">03 — Banners</p>
+          <h1 class="gallery-title fade-up delay-1">
+            Banners <em>& Backdrops</em>
+          </h1>
+          <p class="gallery-sub fade-up delay-2">
+            From event backdrops to digital display banners — each designed to
+            make a brand unmistakable in any setting.
+          </p>
+        </div>
+        <div class="gallery-hero-tags fade-up delay-3">
+          <span class="tag-pill">Event Design</span>
+          <span class="tag-pill">Brand Identity</span>
+          <span class="tag-pill">Display Advertising</span>
+        </div>
+      </section>
+
+      <div class="gallery-grid gallery-grid--banner" id="galleryGridBanner">
+        <!-- 
+      ══════════════════════════════════════════════════════
+      HOW TO ADD YOUR IMAGES:
+      Replace each <div class="gallery-placeholder"> block with:
+      <img src="assets/banners/your-image.jpg" alt="Description" />
+      
+      Recommended folder: assets/banners/
+      Recommended size: 1200 × 400px (landscape/banner format)
+      ══════════════════════════════════════════════════════
+    -->
+        <div
+          class="gallery-item gallery-item--wide"
+          onclick="openLightbox('galleryGridBanner', 0)"
+        >
+           <img src="assets/banner.jpg" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="gallery-item gallery-item--wide"
+          onclick="openLightbox('galleryGridBanner', 1)"
+        >
+          <div class="gallery-item-inner">
+             <img src="assets/banner-2.jpg" alt="Description" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">↗</span>
+            </div>
+          </div>
+        </div>
+        
+     
+      </div>
+    </div>
+
+    <!-- =============================================
+     LIGHTBOX OVERLAY (shared across all galleries)
+     ============================================= -->
+    <div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">
+        ←
+      </button>
+      <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">
+        →
+      </button>
+      <div class="lightbox-inner">
+        <div class="lightbox-img-wrap" id="lightboxImgWrap">
+          <!-- populated by JS -->
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+    </div>
 
     <!-- =============================================
      FOOTER
