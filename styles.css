@@ -437,7 +437,6 @@ nav.scrolled {
 .hero-content::after {
   content: "";
   position: absolute;
-  /* right: -1px; */
   top: 10%;
   bottom: 10%;
   width: 1px;
@@ -717,8 +716,6 @@ nav.scrolled {
   gap: 8rem;
   align-items: center;
 }
-.skills-text {
-}
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -943,8 +940,6 @@ nav.scrolled {
   align-items: start;
   background: var(--cream);
 }
-.about-story-timeline {
-}
 .timeline-item {
   display: flex;
   gap: 1.5rem;
@@ -979,8 +974,6 @@ nav.scrolled {
   line-height: 1.7;
 }
 
-.about-story-right {
-}
 .about-portrait-wrap {
   position: relative;
   margin-bottom: 3rem;
@@ -1651,8 +1644,6 @@ footer {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   margin-bottom: 2rem;
 }
-.footer-brand {
-}
 .footer-logo {
   font-family: var(--font-display);
   font-size: 1.8rem;
@@ -1668,8 +1659,6 @@ footer {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.35);
   font-weight: 300;
-}
-.footer-nav-group {
 }
 .footer-nav-label {
   font-size: 0.6rem;
@@ -1708,7 +1697,7 @@ footer {
 }
 
 /* =============================================
-   ANIMATIONS (stagger on page load)
+   ANIMATIONS
    ============================================= */
 .fade-up {
   animation: fadeUp 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
@@ -1835,6 +1824,11 @@ footer {
     flex-direction: column;
     grid-column: span 1;
   }
+  /* ── FIX: ensure body content on featured cards is fully visible on mobile ── */
+  .portfolio-item.featured .portfolio-item-body {
+    justify-content: flex-start;
+    padding: 2rem 2rem 2.5rem;
+  }
 
   .services-hero {
     padding: 6rem 2.5rem 3rem;
@@ -1889,10 +1883,7 @@ footer {
 
 /* =============================================
    GALLERY PAGES
-   Append this to the bottom of styles.css
    ============================================= */
-
-/* GALLERY HERO */
 .gallery-hero {
   padding: 8rem 6rem 4rem;
   background: var(--warm-white);
@@ -1963,7 +1954,6 @@ footer {
   flex-wrap: wrap;
 }
 
-/* GALLERY GRID — Social (square grid 3 col) */
 .gallery-grid {
   padding: 4rem 6rem 7rem;
   background: var(--cream);
@@ -1972,12 +1962,10 @@ footer {
   gap: 1.5rem;
 }
 
-/* Print grid — 3 col portrait */
 .gallery-grid--print {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* Banners grid — 1 col (wide) */
 .gallery-grid--banner {
   grid-template-columns: 1fr;
   max-width: 1100px;
@@ -1985,7 +1973,6 @@ footer {
   padding: 4rem 6rem 7rem;
 }
 
-/* GALLERY ITEMS */
 .gallery-item {
   cursor: pointer;
   border-radius: var(--radius-md);
@@ -2004,7 +1991,7 @@ footer {
 .gallery-item-inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; /* default: square */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -2044,7 +2031,6 @@ footer {
   transform: scale(1.06);
 }
 
-/* OVERLAY on hover */
 .gallery-overlay {
   position: absolute;
   inset: 0;
